@@ -35,7 +35,7 @@ def send_main_menu(message):
 @bot.message_handler(content_types=['text'])
 def handle_text(message):
     if message.text.lower() == "all":
-
+        bot.send_message(message.chat.id, 'Wait a bit.. Parsing data')
         result = get_all_crypto()
         response = ''
         for name, price in result.items():
