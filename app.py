@@ -4,11 +4,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return get_crypto()
+    with open('Prices', 'r') as f:
+        return dict(f.read())
 @app.route('/<string:currency>')
-def main(currency):
-    return get_crypto(currency)
-
+def get_exact(currency):
+    return get_crypto()[currency]
 
 if __name__ == '__main__':
     app.run()
