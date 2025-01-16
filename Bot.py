@@ -76,7 +76,7 @@ def handle_text(message):
         bot.send_message(message.chat.id, "Unsubscribe from all your subscriptions.")
     elif message.text[-4:] =='_sub':
         subscriptions.append({message.chat.id : message.text[:-4]})
-        bot.send_message(message.chat.id,f'U subscribed to this cryptocurrency, {message.text[:-4]}')
+        bot.send_message(message.chat.id,f'U subscribed to {message.text[:-4]}')
 
 def send_updates():
     while True:
@@ -87,7 +87,7 @@ def send_updates():
                 print(f'For {user_id}, {crypto}')
                 fetch = get_crypto(crypto)
                 if fetch :
-                    bot.send_message(user_id, f"Update for {crypto}: {fetch}")
+                    bot.send_message(user_id, f"Update for {crypto} - {list(fetch.values())[0]}")
                 else:
                     bot.send_message(user_id, f"Could not fetch data for {crypto}.")
         time.sleep(5)
