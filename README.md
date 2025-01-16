@@ -29,7 +29,7 @@ The main page will return a JSON file with all currencies and their values. It i
 ---
 http://127.0.0.1:5000/:
 ---
-![image](https://github.com/user-attachments/assets/9e6d0a18-0ff0-4258-b9e9-5de6ea398cdd)
+![image](https://github.com/user-attachments/assets/d211947c-e83e-45f8-9ff6-40dff9c1be04)
 ---
 If we want to get the value of a specific currency, we should add its tag after the slash in the URL. For example, 127.0.0.1:5000/btc.
 (In this case, we don't need to have parsing.py running.
