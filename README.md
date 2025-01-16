@@ -23,4 +23,17 @@ CryptoTelBot is a multi-functional project that includes a **Telegram Bot**, aim
 ---
 ![image4](https://github.com/user-attachments/assets/eade3b9b-1ea1-4547-95f4-081f9cce3610)
 ---
-##Api example
+## Api example
+---
+The main page will return a JSON file with all currencies and their values. It is important to note that if the parsing.py file is not run, these values will not be updated
+---
+http://127.0.0.1:5000/:
+---
+![image](https://github.com/user-attachments/assets/9e6d0a18-0ff0-4258-b9e9-5de6ea398cdd)
+---
+If we want to get the value of a specific currency, we should add its tag after the slash in the URL. For example, 127.0.0.1:5000/btc.
+(In this case, we don't need to have parsing.py running.
+---
+http://127.0.0.1:5000/btc:
+---
+![image](https://github.com/user-attachments/assets/bada9861-3f65-424e-ace2-6ec21062a57e)
