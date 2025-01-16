@@ -1,5 +1,5 @@
 import telebot
-from Parsing import *  # Убедитесь, что Crypto_list и другие функции определены
+from Parsing import *
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 import threading
 import time
@@ -79,7 +79,6 @@ def handle_text(message):
         bot.send_message(message.chat.id,f'U subscribed to this cryptocurrency, {message.text[:-4]}')
 
 def send_updates():
-    """Функция для регулярной отправки данных подписанным пользователям."""
     while True:
         print('Update')
         print(subscriptions)
